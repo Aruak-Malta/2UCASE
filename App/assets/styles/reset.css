@@ -1,0 +1,278 @@
+/* Fonte Work Sans e Quicksand */
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&family=Work+Sans:wght@300;400;500&display=swap');
+
+/* Reset Global */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a, button{
+    cursor: pointer;
+}
+
+object{
+    padding: 1px;
+}
+
+#body-margin{
+    margin-top: 148px;
+    overflow-x: hidden;
+}
+
+header{
+    margin-top: -148px;
+}
+
+footer a:hover, header a:hover:not(#logo-site a, #first-link) {
+    text-decoration: underline;
+    transition: ease .4s;
+}
+
+#logo-site a{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+
+
+
+/* Variaveis de Cor */
+
+:root{
+    --cor-principal: #fb745d;
+    --svg-color: #f58e80;
+    --cor-secundaria-background: rgb(16, 55, 65);
+    --cor-secundaria-gradient: linear-gradient(90deg, rgba(16, 55, 65, 1) 32%, rgba(16, 77, 92, 1) 85%);
+}
+
+/* Estilo de fontes nos titulos e textos */
+
+h1{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+    font-size: 2.5rem;
+}
+
+h2{
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1.9rem;
+}
+
+h3{
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1.75rem;
+}
+
+h4, p, button, a{
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+h5, input, textarea, select, option, label{
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1rem;
+    outline: none;
+}
+
+h6{
+    font-family: 'Work Sans', sans-serif;
+    font-size: 0.75rem;
+}
+
+/* Resets de links e listas */
+
+a{
+    color: black;
+    text-decoration: none;
+    padding: .5px;
+}
+
+ul, li{
+    list-style: none;
+}
+
+/* Componentes */
+
+#principal-button {
+    padding: 1rem;
+    background-color: var(--cor-principal);
+    color: white;
+    font-weight: 500;
+    text-transform: uppercase;
+    width: 10rem;
+    border: 1px solid var(--cor-principal);
+    border-radius: 15px;
+}
+
+/* Media Queries globais */
+
+
+@media (max-width: 1050px) {
+    #body-margin{
+        margin-top: 80px;
+    }
+
+    header{
+    margin-top: -80px;
+    }
+}
+
+/* Checkbox */
+
+/* The container */
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+    background-color: var(--cor-principal);
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: white;
+}
+
+
+/* Produto */
+
+.produto-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--cor-principal);
+    gap: .5rem;
+}
+
+.produto-box img {
+    width: 250px;
+}
+
+.produto-box h4 {
+    font-weight: bold;
+    max-width: 150px;
+    text-align: center;
+}
+
+
+/* Botão de Favoritos */
+
+#favorite-button{
+    background-color: #fff;
+    border: none;
+}
+
+.box-produto-info #favorite-button{
+   align-self: flex-start;
+   margin: 0;
+}
+
+
+/* Error Handler */
+
+#container-error, #container-error-login{
+    display: none;
+    width: 100%;
+    background-color: #ffcccc;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#error-exib, #error-exib-login{
+    font-size: 14px;
+    color: #ff0000;
+}
+
+#close-error{
+    margin-right: 99%;
+    margin-bottom: 5px;
+    background-color: #ffcccc;
+    border: none;
+    width: 0;
+}
+
+#close-error i{
+    color: #ff0000;
+}
+
+
+/*LOGIN GOOGLE*/
+
+#container-error-google{
+    display: flex;
+    width: 100%;
+    background-color: #ffcccc;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    justify-content: center;
+}
+
+#error-exib-google{
+    font-size: 20px;
+    color: #ff0000;
+}
+
+/* Glide style */
+
+.glide__arrow:not(.glide-arrow-home){
+    background-color: #fff;
+    border: none;
+}

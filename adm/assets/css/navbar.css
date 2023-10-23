@@ -1,0 +1,119 @@
+@import './reset.css';
+
+
+header{
+    display: flex;
+    flex-direction: column;
+    width: 16rem;
+    gap: 10rem;
+    padding: 2rem;
+    min-height: calc(100% + 100px);
+    background-color: var(--cor-laranja);
+    float: left;
+    margin-top: -2rem;
+}
+
+header #nav-links ul{
+    color: #ffff;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+header #nav-links ul a{
+    color: #ffff;
+    font-weight: 500;
+}
+
+header p{
+    word-break: break-all;
+    color: var(--cor-laranja);
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+
+#logo{
+    color: #ffff;
+}
+
+#logout-session{
+    padding: 1rem;
+    background-color: #fff;
+    color: var(--cor-laranja);
+    font-weight: 500;
+    border: 1px solid #fff;
+    text-transform: uppercase;
+    border-radius: 15px;
+    margin-top: 100%;
+}
+
+#logout-session:hover {
+    padding: 1rem;
+    background-color: var(--cor-laranja);
+    color: #fff;
+    font-weight: 500;
+    border: 1px solid var(--cor-laranja);
+    text-transform: uppercase;
+    border-radius: 15px;
+    transition: ease .4s;
+}
+
+.dropdown-content{
+    display: none;
+    flex-direction: column;
+    gap: .5rem;
+    margin-top: 1rem;
+}
+
+.dropdown-content a{
+    display: block;
+    padding: .5rem;
+}
+
+#nav-links li a:hover{
+    text-decoration: underline;
+    transition: ease .4s;
+}
+
+.dropdown-link{
+    display: block;
+    padding: .5px;
+    color: #ffff;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.dropdown-link:hover{
+    text-decoration: underline;
+    transition: ease .4s;
+}
+
+.dropdown-link:hover  .dropdown-content{
+    display: flex;
+}
+
+#html-navbar{
+    max-width: 14rem;
+}
+
+.container-session{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+}
+
+
+/* #container #menu {
+    width: 18%;
+    float: left;
+    
+}
+#container #apres {
+    width: 80vw;
+    height: 100vh;
+    float: left;
+} */

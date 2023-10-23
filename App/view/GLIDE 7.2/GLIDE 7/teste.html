@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Produto 2UCASE</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Required Core Stylesheet -->
+    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css">
+
+    <!-- Optional Theme Stylesheet -->
+    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.theme.min.css">
+</head>
+
+<body>
+    <div class="container_prod glide">
+        <div class="glide__arrows" data-glide-el="controls">
+            <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><</button>
+        </div>
+
+        <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+                <div class="glide__slide card">
+                    <img class="img-prod" src="img/capinha smiles derretidos.png" alt="">
+                    <div class="cont-prod">
+                        <h1 class="titulo-prod">Capinha Smiles Mickey </h1>
+                        <p class="precoAntigo">R$ 5,60</p>
+                        <div class="conteudoCard">
+                            <span class="precoAtual"><h4>R$ 5,50</h2></span>
+                            <span class="desconto">50%</span>
+                        </div>
+                        <span class="ajuste-button">
+                            <button class="button-comprar">COMPRAR</button>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- <div class=" glide__slide card">
+                    <img class="img-prod" src="img/capinha smiles derretidos.png" alt="">
+                    <div class="cont-prod">
+                        <h1>Capinha Smiles Mickey </h1>
+                        <h2>R$ 5,60</h2>
+                        <div class="conteudoCard">
+                            <span class="precoAtual">R$ 5,50</span>
+                            <span class="desconto">50%</span>
+                        </div>
+                        <button class="button-comprar">COMPRAR</button>
+                    </div>
+                </div> -->
+
+                <!-- <div class=" glide__slide card">
+                    <img class="img-prod" src="img/capinha smiles derretidos.png" alt="">
+                    <div class="cont-prod">
+                        <h1>Capinha Smiles Mickey </h1>
+                        <h2>R$ 5,60</h2>
+                        <div class="conteudoCard">
+                            <span class="precoAtual">R$ 5,50</span>
+                            <span class="desconto">50%</span>
+                        </div>
+                        <button class="button-comprar">COMPRAR</button>
+                    </div>
+                </div>
+
+                <div class=" glide__slide card">
+                    <img class="img-prod" src="img/capinha smiles derretidos.png" alt="">
+                    <div class="cont-prod">
+                        <h1>Capinha Smiles Mickey </h1>
+                        <h2>R$ 5,60</h2>
+                        <div id="conteudoCard">
+                            <span class="precoAtual">R$ 5,50</span>
+                            <span class="desconto">50%</span>
+                        </div>
+                        <button class="button-comprar">COMPRAR</button>
+                    </div>
+                </div> -->
+
+                <!-- <div class=" glide__slide card">
+                    <img class="img-prod" src="img/capinha smiles derretidos.png" alt="">
+                    <div class="cont-prod">
+                        <h1>Capinha Smiles Mickey </h1>
+                        <h2>R$ 5,60</h2>
+                        <div id="conteudoCard">
+                            <span class="precoAtual">R$ 5,50</span>
+                            <span class="desconto">50%</span>
+                        </div>
+                        <button class="button-comprar">COMPRAR</button>
+                    </div>
+                </div> -->
+            </ul>
+        </div>
+        <div class="glide__arrows" data-glide-el="controls">
+            <button class="glide__arrow glide__arrow--right" data-glide-dir=">">></button>
+        </div>
+    </div>
+    <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
+
+    <script>
+        const configProd = {
+            type: "carousel",
+            perView: 1,
+            startAt: 0,
+            gap: 20,
+            breakpoints: {
+                800: {
+                    perView: 3,
+                },
+                600: {
+                    perView: 2,
+                },
+                500: {
+                    perView: 1,
+                }
+            }
+        }
+
+        new Glide('.glide', configProd).mount()
+    </script>
+</body>
+
+</html>

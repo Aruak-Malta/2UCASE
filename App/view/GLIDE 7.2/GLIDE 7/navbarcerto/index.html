@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+    <!-- or -->
+
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Página Inicial</title>
+</head>
+
+<body>
+    <header>
+        <img src="img/2UCASE LOGO (1).png" alt="LOGO" width="150px" height="70px" class="logo">
+        <!-- <a href="#" class="logo"></i>2UCASE</a>     -->
+        <nav>
+            <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+              </div>
+
+            <input type="text" placeholder="Pesquisar.." id="searchbar">
+
+            <ul class="navegacao">
+              
+                <li><a href="#">Novidades</a></li>
+                <li><a href="#">Promoções</a></li>
+                <li><a href="#">Capinhas</a></li>
+                <li><a href="#">Acessórios</a></li>
+                <li><a href="#">Sobre nós</a></li>
+
+            </nav>
+        </ul><!--navegação-->
+
+        
+        <div class="header-icons">
+            <i class='bx bx-user-circle bx-lg' ></i>
+        </div>
+        
+        <div class="infoLogDiv">
+        <p class="infoLog">Minha Conta</p>
+        <p class="infoLog">Entre ou Cadastre-se</p>
+        </div>
+
+
+        <div class="header-icons">
+            <p></p>
+            <i class='bx bx-heart bx-lg'></i>
+            <i class='bx bx-cart bx-lg' ></i>
+        </div><!--header-icons-->
+    </header>
+    <section class="home">
+        <div class="home-img">
+            <img src="banner.png" class="one">
+        </div><!--home-img-->
+
+    </section><!--home-->
+
+    <script>
+      function slider (anything){
+        document.querySelector ('.one') .src = anything;
+
+        };
+
+      let menu = document.querySelector ('#menu-icon');
+      let navbar = document.querySelector ('.navbar');
+
+      menu.onclick = () => {
+      menu.classList.toggle ('bx-x');
+      navbar.classList.toggle ('open');
+
+       }
+
+    </script>
+
+   
+
+</body>
+
+</html>

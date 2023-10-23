@@ -1,0 +1,543 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600&family=Work+Sans:ital,wght@0,500;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600&family=Work+Sans:wght@400&display=swap');
+   
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.container{
+    width: 100%;
+    margin-top: 10%;/*espaço para a navbar*/
+}
+.wrapper{
+    width: 90%;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.text{
+    flex-basis: 45%;
+    margin-bottom: 0%;
+}
+.all-images{
+    height: 80vh;
+    display: flex;
+}
+.small-images{
+    display: flex;
+    flex-direction: column;
+}
+.small-images img{
+height: 12vh; /*altura da imagem*/
+margin-bottom: 20px;
+cursor: pointer;
+opacity: 0.6;
+}
+
+.small-images img:hover{
+    opacity: 1;
+}
+
+.main-images img{
+height: 80%; /*altura da imagem large*/
+
+}
+
+/* p{
+    margin-bottom: 2px;
+} */
+
+h2{
+    font-size: 35px;
+    color: #000000;
+    margin-bottom: 5%;
+}
+
+.paragrafh{
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+
+}
+.review{
+    background-color:  #698aff;;
+    display: inline;
+    color: #fff;
+    padding: 4px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.review .fa{
+counter-reset: #fff;
+}
+.select-container {
+    margin-top: 5%;
+    float: left;
+    margin: 10px; /* Margem superior do container */
+}
+
+/* Espaço entre os selects */
+.styled-select:first-child {
+    margin-right: 2cm; /* Adiciona espaço entre os selects */
+}
+
+select {
+  background-color: #eeeeee;
+    color: #000;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 2px;
+    cursor: pointer;
+    margin-top: 5%;
+    width: 240px;
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    position: relative; /* Adicione esta propriedade */
+}
+
+select {
+    transition: background-color 0.5s;
+}
+
+select:hover {
+    background-color: #d2d2d2;
+}
+.price-box{
+    width: 20%;
+    height: auto;
+    margin: 0 10px; /* Adicione margem esquerda e direita */
+}
+.price-1{
+    padding-right: 10px;
+    width: 100px; /* Largura do conteúdo */
+    height: 40px;
+    font-family: 'Work Sans';
+    font-style: italic;
+    font-weight: 300;
+    font-size: 18px;
+    color: #6C6C6C;
+}
+.price{
+    color: #000;
+    font-size: 26px;
+    font-weight: bold;
+    width: 190px; /* Largura do conteúdo */
+    height: 31px;
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    margin-top: 20%;
+}
+.buttons{
+    margin-left: 25%;
+    display: flex;
+    flex-direction: column; /* Empilha os botões verticalmente */
+    align-items: center;
+    gap: 50px; /* Espaçamento vertical entre os botões */
+}
+button {
+    width: 240px;
+    color: #fff;
+    font-size: 15px;
+    outline: none;
+    border: 0;
+    border-radius: 3px;
+    background-color: #698AFF;
+    padding: 10px 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Adicione uma transição suave */
+}
+
+/* Estilo ao passar o mouse */
+button:hover {
+    background-color: #4c6ccc;
+}
+.buy{
+/* COMPRAR */
+font-family: 'Quicksand', sans-serif;
+font-style: normal;
+font-weight: 300;
+font-size: 25px;
+color: #FFFFFF;
+height: 55px;
+border-radius: 4px;
+cursor: pointer;
+border: none;
+}
+
+.buy .icon {
+    display: inline-block;
+    width: 30px; /* Largura da imagem */
+    height: 30px; /* Altura da imagem */
+    background-image: url('img/shopping-bag.png'); /* Caminho para a imagem */
+    background-size: contain; /* Ajusta o tamanho da imagem */
+    background-repeat: no-repeat; /* Impede a repetição da imagem */
+    margin-right: 10px; /* Espaço entre a imagem e o texto */
+}
+
+button .fa{
+    margin-right: 10px;
+}
+
+.calculator{
+font-family: 'Quicksand', sans-serif;
+font-style: normal;
+font-weight: 100;
+font-size: 18px;
+color: #FFFFFF;
+}
+.calculator, .buy {
+    /* Estilos para os botões */
+    transition: background-color 0.2s; /* Adiciona transição de cor */
+}
+
+.calculator:hover, .buy:hover {
+    background-color: #5b75cc;}  
+.text-box input {
+    border:none;
+    border-bottom: 2px solid #698AFF;
+    padding: 1px;
+    font-size: 16px;
+    width: 200px;  
+
+}
+.text-box {
+    position: relative;
+    max-width: 200px;
+    margin-right: 90px;
+    margin-top: -30px; /* Ajuste o valor negativo conforme necessário */
+    
+}
+
+/* Efeito quando o input está em foco */
+.text-box input:focus {
+    padding-left: 55px; /* Adicione um espaçamento à esquerda do input */
+    outline: none;
+    border-bottom-color: #4c6ccc;
+}
+
+.placeholder-image {
+    position: absolute;
+    top: -25px;
+    left: 0px;
+    width: 50px;
+    height: 50px;
+    background-image: url('img/delivery-truck.png'); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: none;
+}
+
+@media only screen and (min-width: 801px) and (max-width: 1200px) {
+    /* Ajustes para tela entre 801px e 1200px */
+    .buttons {
+        margin-left: 0;
+    }
+    .wrapper {
+        flex-direction: column;
+        height: auto;
+        padding: 5% 0;
+    }
+    .text {
+        padding-top: 50px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+
+    .select-form {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .select-container {
+        width: 45%;
+    }
+
+    select {
+        width: 100%;
+    }
+
+    .price-box {
+        width: 80%;
+        margin: 10px auto;
+    }
+    
+    .price-1,
+    .price {
+        width: auto;
+        font-size: 20px;
+        text-align: center;
+        margin-top: 10px;
+    }
+    
+    .text-box {
+        margin-left: 25%;
+        max-width: 100%;
+        margin: 30px auto;
+    }
+    
+    .text-box input {
+        margin-left: 25%;
+        width: 50%;
+        font-size: 14px;
+    }
+
+    .placeholder-image {
+        top: -15px;
+        left: 80px;
+        width: 45px;
+        height: 45px;
+    }
+}
+
+ @media only screen and (min-width: 1201px){
+   /* Estilos para os botões*/
+    .wrapper {
+        height: auto;
+        padding: 5% 0;
+    }
+
+    .buttons {
+        margin-left: 15rem;
+        display:grid;
+        flex-direction: column; /*Altera para flex-direction: row */
+        gap: 20px;
+    }
+
+    .buttons button {  
+        padding: 8px 10px;
+    }
+  
+    .select-container {
+        align-items: center; /*Centraliza verticalmente */
+    }
+
+    .styled-select {
+        width: 100%;  /*Divide a largura igualmente e subtrai 10px para criar espaço  */
+        padding-right: 29px;/* Adiciona espaço interno à direita do primeiro select */
+    }
+    
+     /*Ajuste a margem do segundo select para criar espaço */
+    .styled-select + .styled-select {
+        margin-left: 90px; /*Adiciona espaço entre os selects */
+    }
+
+
+} 
+
+@media only screen and (max-width: 1261px) {
+    .buttons {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .styled-select {
+        width: 100%;
+        padding-right: 12px;
+    }
+
+    .styled-select + .styled-select {
+        margin-left: 15px;
+    }
+    
+    /* Adicione outras regras conforme necessário */
+}
+
+@media only screen and (max-width: 800px) {
+    .wrapper {
+        flex-direction: column;
+        height: auto;
+        padding: 5% 0;
+    }
+    .text {
+        padding-top: 50px;
+    }
+
+    /* Ajuste para colocar os botões ao lado dos selects */
+    .select-form {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .select-container {
+        margin: 10px;
+        width: 45%;
+    }
+    
+    select {
+        width: 100%;
+    }
+    
+    .buttons {
+        margin-left: 0;
+        gap: 20px;
+    }
+
+    button {  
+        width: 60%;
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+    
+    /* Estilo para o botão "Calculator" */
+    .calculator {
+        font-size: 14px; /* Ajuste o tamanho do texto do botão */
+        width: calc(62% - 10px); /* 50% do espaço disponível com espaço entre eles */
+        padding: 8px 10px;
+    }
+  /* Ajuste para posicionar os preços acima dos selects */
+  .price-box {
+    width: 80%; /* Ajuste a largura conforme necessário */
+    margin: 10px auto; /* Centralize horizontalmente */
+    text-align: center; /* Centralize o texto */
+}
+
+.price-1,
+.price {
+    width: auto;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 10px; /* Ajuste o valor conforme necessário */
+}
+
+.text-box {
+    margin-left: 25%;
+    max-width: 100%;
+    margin: 30px auto;
+}
+
+.text-box input {
+    margin-left: 25%;
+    width: 50%;
+    font-size: 14px;
+}
+
+.placeholder-image {
+    top: -15px;
+    left: 80px;
+    width: 45px;
+    height: 45px;
+}
+
+
+
+}
+@media only screen and (max-width: 600px) {
+    /* Ajustes para telas até 600px */
+    .text {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .all-images {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .main-images img {
+        height: auto;
+        max-height: 60vh;
+        margin-bottom: 10px;
+    }
+
+    .small-images {
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        order: 1;
+        margin-top: 10px;
+    }
+
+    .small-images img {
+        width: 15%;
+        margin-bottom: 0;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
+    .select-form {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 20%;
+    }
+
+    .select-container {
+        margin-left: 0;
+        margin: 10px auto;
+        width: 75%;
+    }
+
+    select {
+        width: 100%;
+        font-size: 18px;
+        margin-top: 0;
+    }
+
+    .price-box {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .price-1,
+    .price {
+        width: auto;
+        font-size: 20px;
+        text-align: center;
+        margin-top: 15%;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    button {  
+        width: 60%;
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+
+    .text-box {
+        margin-left: 25%;
+        max-width: 100%;
+        margin: 30px auto;
+    }
+
+    .text-box input {
+        margin-left: 25%;
+        width: 50%;
+        font-size: 14px;
+    }
+
+    .placeholder-image {
+        top: -15px;
+        left: 80px;
+        width: 45px;
+        height: 45px;
+    }
+}
+
