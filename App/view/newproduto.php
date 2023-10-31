@@ -10,6 +10,7 @@ $manager = new Manager();
 //     header("Location: ./homepage.php?error-code=FR30");
 //     exit();
 // }
+// Aruak esteve por aqui 
 
 $idProduto = 7;
 $returnProduto = $manager->getInfo('user_produto', 'id_produto', $idProduto);
