@@ -11,6 +11,7 @@ $manager = new Manager();
 //     exit();
 // }
 // Aruak esteve por aqui 
+// Davi esteve por aqui! 
 
 $idProduto = 7;
 $returnProduto = $manager->getInfo('user_produto', 'id_produto', $idProduto);
