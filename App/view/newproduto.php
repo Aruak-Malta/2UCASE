@@ -66,22 +66,36 @@ $returnImagemProduto = $manager->getInfo('user_produtos_img', 'id_produto', $idP
                     <h2><?= $returnProduto[0]['nome_produto'] ?></h2>                            <!--Nome do produto -->
                     <p class="paragrafh"><?= $returnProduto[0]['descricao_produto'] ?></p>       <!--Descrição do produto -->
                     <br>
+
+                    <!-- Avaliação  -->
+                    <?php
+                    //Avaliação
+                        $countAvaliacao = $manager->countProdutoCarrinho('user_avaliacao', 'id_avaliacao', 'id_produto', $idProduto);
+                    ?>
                     <div class="review">
-                        <span>(4.6)</span>
+                        <span>(<?php if($countAvaliacao[0]['COUNT(id_avaliacao)'] == 0){
+                            print "-";
+                            }else{
+                                print $countAvaliacao[0]['COUNT(id_avaliacao)'];
+                            };
+                            ?>)</span>
                         <span class="fa fa-star"></span>
                     </div>
+                    <!-- Fim Avaliação -->
+
+                        <!-- Marca do celular -->
                     <form class="select-form">
                         <div class="select-container">
                             <select class="styled-select" id="colour" name="colour">
                                 <option value="select-colour">Marca:</option>
-                                <option value="red">Red</option>
-                                <option value="black">Black</option>
-                                <option value="blue">Blue</option>
-                                <option value="green">Green</option>
-                                <option value="purple">Purple</option>
+                                <option value="iphone">Iphone</option>
+                                <option value="sam">Samsungo</option>
                             </select>
                         </div>
+                        <!-- Fim Marca do celular -->
                     
+
+                        <!-- Modelo de capa -->
                         <div class="select-container">
                             <select class="styled-select" id="modelo" name="modelo"> 
                                 <option value="select-model">Modelo:</option>
@@ -89,16 +103,15 @@ $returnImagemProduto = $manager->getInfo('user_produtos_img', 'id_produto', $idP
                         </div>
                     </form>
                     
+
+
                     <script>
                         const colourSelect = document.getElementById('colour');
                         const modeloSelect = document.getElementById('modelo');
                         
                         const modelosPorCor = {
-                            red: ['Modelo 1', 'Modelo 2'],
-                            black: ['Modelo 3', 'Modelo 4'],
-                            blue: ['Modelo 5', 'Modelo 6'],
-                            green: ['Modelo 7', 'Modelo 8'],
-                            purple: ['Modelo 9', 'Modelo 10']
+                            iphone: ['Iphone 13 Pro Max','Iphone 14', 'Iphone 14 Pro Max'],
+                            sam: ['A53', 'S23', 'S23 Ultra']
                         };
                         
                         colourSelect.addEventListener('change', function() {
@@ -120,6 +133,12 @@ $returnImagemProduto = $manager->getInfo('user_produtos_img', 'id_produto', $idP
                             }
                         });
                     </script>
+                    <!-- Fim do Modelo de capa -->
+
+                
+
+
+
                     <div class="price-box"><br>
                         <p class="price-1"><strike>R$ 89,900</strike></p><br>
                         <p class="price">R$ <?= $returnProduto[0]['preco_produto']?></p>
