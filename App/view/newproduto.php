@@ -13,7 +13,7 @@ $manager = new Manager();
 // Aruak esteve por aqui 
 // Davi esteve por aqui! 
 
-$idProduto = 7;
+$idProduto = 15;
 $returnProduto = $manager->getInfo('user_produto', 'id_produto', $idProduto);
 
 $returnImagemProduto = $manager->getInfo('user_produtos_img', 'id_produto', $idProduto);
@@ -83,11 +83,15 @@ $returnImagemProduto = $manager->getInfo('user_produtos_img', 'id_produto', $idP
                     </div>
                     <!-- Fim Avaliação -->
 
-                        <!-- Marca do celular -->
-                    <form class="select-form">
-                        <div class="select-container">
-                            <select class="styled-select" id="colour" name="colour">
-                                <option value="select-colour">Marca:</option>
+                        <!-- Inicio carrinho -->
+                    <form method="POST" action="../controllers/ControllerAddprodutoCarrinho.php" class="select-form"  id="form-prod-carrinho">
+
+                    <input type="hidden" name="idProduto" value="<?= $idProduto ?>">
+
+                        <!-- Marca do celular -->  
+                          <div class="select-container">
+                            <select class="styled-select" id="colour" name="marcaProduto" oninput="selectCelularCheck()">
+                                <option value="" selected disabled>Marca:</option>
                                 <option value="iphone">Iphone</option>
                                 <option value="sam">Samsungo</option>
                             </select>
@@ -97,11 +101,11 @@ $returnImagemProduto = $manager->getInfo('user_produtos_img', 'id_produto', $idP
 
                         <!-- Modelo de capa -->
                         <div class="select-container">
-                            <select class="styled-select" id="modelo" name="modelo"> 
+                            <select class="styled-select" id="modelo" name="modeloProduto"> 
                                 <option value="select-model">Modelo:</option>
                             </select>
                         </div>
-                    </form>
+                    
                     
 
 
@@ -110,7 +114,7 @@ $returnImagemProduto = $manager->getInfo('user_produtos_img', 'id_produto', $idP
                         const modeloSelect = document.getElementById('modelo');
                         
                         const modelosPorCor = {
-                            iphone: ['Iphone 13 Pro Max','Iphone 14', 'Iphone 14 Pro Max'],
+                            iphone: ['13 Pro Max','14', '14 Pro Max'],
                             sam: ['A53', 'S23', 'S23 Ultra']
                         };
                         
@@ -144,23 +148,39 @@ $returnImagemProduto = $manager->getInfo('user_produtos_img', 'id_produto', $idP
                         <p class="price">R$ <?= $returnProduto[0]['preco_produto']?></p>
                 </div> 
                 <div class="buttons">
-                        <button class="buy">
+
+                    <!-- Comprar/Adicionar ao carrinho -->
+
+                        <button type="submit" class="buy" >
                             <span class="icon"></span>
                             COMPRAR
                         </button>
-                                <button class="calculator">
+
+                    <!-- Fim Comprar/Adicionar ao carrinho -->
+
+                    <!-- Calcular frete -->
+
+                                <button class="calculator" id="principal-button" type="button">
                                     <span class="fa fa-shopping-cart"></span>
                                     CALCULAR FRETE
                                 </button>
+
+                    
                                
                            
             </div>
             </div>
             <div class="text-box">
-                <div class="placeholder-image"></div>
-                <input type="text" placeholder="">
+                <label for="cep">
+                    <div class="placeholder-image"></div>
+                    <input type="text" name="cep" placeholder=""> 
+                    <input type="hidden" name="valueFrete" id="value-frete-input" value="<?=$returnProduto[0]['preco_produto']?>">
+                </label>
             </div>
         </div>
+                    <!-- Fim calcular frete -->
+                    </form>
+        <!-- Fim carrinho -->
      
     </div>
 
